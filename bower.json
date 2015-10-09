@@ -1,0 +1,6 @@
+{
+  "name": "Nested",
+  "dependencies": {
+    "jquery": "~2.1"
+}
+}

@@ -1,0 +1,17 @@
+  <%= inputs_for @f, :addresses, fn af -> %>
+  <div id="new_address">
+    <div class="form-group">
+        <%= label af, :type, "Type", class: "control-label" %>
+        <%= text_input af, :type, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= label af, :street, "Street", class: "control-label" %>
+        <%= text_input af, :street, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= label af, :zip, "Zip", class: "control-label" %>
+        <%= text_input af, :zip, class: "form-control" %>
+    </div>
+    <%= link "Remove", to: "#", id: "delete_address" %>
+  </div>
+  <% end %>

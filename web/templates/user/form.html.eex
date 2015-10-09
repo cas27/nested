@@ -16,19 +16,24 @@
   </div>
 
   <%= inputs_for f, :addresses, fn af -> %>
-  <div class="form-group">
-    <%= label af, :type, "Type", class: "control-label" %>
-    <%= text_input af, :type, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= label af, :street, "Street", class: "control-label" %>
-    <%= text_input af, :street, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= label af, :zip, "Zip", class: "control-label" %>
-    <%= text_input af, :zip, class: "form-control" %>
-  </div>
+    <div class="form-group">
+        <%= label af, :type, "Type", class: "control-label" %>
+        <%= text_input af, :type, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= label af, :street, "Street", class: "control-label" %>
+        <%= text_input af, :street, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= label af, :zip, "Zip", class: "control-label" %>
+        <%= text_input af, :zip, class: "form-control" %>
+    </div>
+    <div class="form-group">
+        <%= label af, :delete, "Delete?", class: "control-label" %>
+        <%= checkbox af, :delete %>
+    </div>
   <% end %>
+  <%= link_to_address_fields %>
 
   <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
